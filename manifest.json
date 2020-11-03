@@ -11,54 +11,54 @@
     "lang": "es-CO",
     "icons": [
       {
-        "src": "./img/favicon/millonarios_1024.jpg",
+        "src": "./img/favicon/millonarios_1024.png",
         "sizes": "1024x1024",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_512.jpg",
+        "src": "./img/favicon/millonarios_512.png",
         "sizes": "512x512",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_384.jpg",
+        "src": "./img/favicon/millonarios_384.png",
         "sizes": "384x384",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_256.jpg",
+        "src": "./img/favicon/millonarios_256.png",
         "sizes": "256x256",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_192.jpg",
+        "src": "./img/favicon/millonarios_192.png",
         "sizes": "192x192",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_128.jpg",
+        "src": "./img/favicon/millonarios_128.png",
         "sizes": "128x128",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_96.jpg",
+        "src": "./img/favicon/millonarios_96.png",
         "sizes": "96x96",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./favicon/millonarios_64.jpg",
+        "src": "./img/favicon/millonarios_64.png",
         "sizes": "64x64",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_32.jpg",
+        "src": "./img/favicon/millonarios_32.png",
         "sizes": "32x32",
-        "type": "image/jpg"
+        "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_16.jpg",
+        "src": "./img/favicon/millonarios_16.png",
         "sizes": "16x16",
-        "type": "image/jpg"
+        "type": "image/png"
       }
     ]
   }

@@ -4,7 +4,7 @@ const CACHE_NAME = 'v1_cache_ahorra+',
   urlsToCache = [
     './',
     'https://code.jquery.com/jquery-3.3.1.slim.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ',
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js',
     'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js',
     'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4',
@@ -19,7 +19,17 @@ const CACHE_NAME = 'v1_cache_ahorra+',
     'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
     './style.css',
     './script.js',
-    './img/favicon/ahorra_16.jpg'
+    './img/favicon/ahorra_16.jpg',
+    './img/favicon/ahorra_32.jpg',
+    './img/favicon/ahorra_64.jpg',
+    './img/favicon/ahorra_96.jpg',
+    './img/favicon/ahorra_128.jpg',
+    './img/favicon/ahorra_192.jpg',
+    './img/favicon/ahorra_256.jpg',
+    './img/favicon/ahorra_384.jpg',
+    './img/favicon/ahorra_512.jpg',
+    './img/favicon/ahorra_1024.jpg',
+    './img/perfil.jpg',
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos

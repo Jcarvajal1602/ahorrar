@@ -1,53 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Millonarios</title>
-        <meta name="description" content="Millonarios F.C.">
-      
-        <meta name="theme-color" content="#FEFEFF">
-        <meta name="MobileOptimized" content="width">
-        <meta name="HandheldFriendly" content="true">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="shortcut icon" type="image/png" href="./img/favicon/millonarios_16.png">
-        <link rel="apple-touch-icon" href="./img/images.jpg">
-        <link rel="apple-touch-startup-image" href="./img/images.jpg">
-        <link rel="manifest" href="./manifest.json">
-      
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
-      </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ahorra +">
+    <title>Ahorra +</title>
+    <meta name="theme-color" content="#1976D2">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="./img/images.jpg">
+    <link rel="apple-touch-startup-image" href="./img/images.jpg">
+    <link rel="manifest" href="./manifest.json">
+
+
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./img/favicon/ahorrar.png">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/style.css"> -->
+
+</head>
+
+<style>
+      /* footer */
+
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#pie {
+  height:50px;
+  line-height:50px;
+  background:#6d7fcc;
+  color:white;
+  text-align:center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+}
+  
+</style>
+
+<script>
+    function crear() {
+        var nombre = document.getElementById("nombre").value;
+        var avatar = document.getElementById("avatar").value;
+        if( nombre != "" && avatar != "" ){
+            location.href="ahorrar.html?n="+nombre+"&a="+avatar+"";
+        }else{
+           var contenido="<div class='alert alert-danger'> Los campos son obligatorios</div>";
+           document.getElementById("resultado").innerHTML=contenido
+        }
+     
+}
+
+function crear2() {
+    document.getElementById("resultado").innerHTML="";
+    document.form.reset();
+    document.form.cols.focus();
+        }
+
+</script>
+
 <body>
+
+    <div class="wrapper container">
+      
+        <!-- Page Content  -->
+        <div id="content">
+
+            
+
+            <h3> <strong> <img src="./img/favicon/ahorrar.png" alt="Ahorrar +" width="100" height="100"> Ahorrar + </strong> </h3>
+            <p>Te permitira llevar un control de ahorro diferente, ya que introduciras la cifra que deseas ahorrar y se generara una tabla con los campos de $50 hasta tu valor deseado podiendo
+               marcar las cifras ya ahorradas, llevando un conteo del total ahorrado y total a ahorrar.
+            </p>
+            <div class="line"></div>
+
+
+            <form name="form">
+                <div class=" form-group row">
+                        <label for="" class="col-md-2 col-form-label"><strong>Nombre:</strong></label>
+                        <div class="col-sm-2 ">
+                            <input type="text" class="form-control" id="nombre" autofocus required>
+                        </div>
+
+                        <label for="" class="col-md-2 col-form-label"><strong>Foto:</strong></label>
+                        <div class="col-sm-4 ">
+                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="form-control" required>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <br>
+                            <input type="button" id="enviar" class="btn btn-primary" value="Registrarse" onclick="crear()">
+                            <input type="button" id="limpiar" class="btn btn-danger" value="Limpiar" onclick="crear2()">            
+                    </div>
+                </div>
+            </form>
+
+            <div id="resultado"></div>
+            
+            <div class="line"></div>
+        
+            
+        </div>
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="pie">2020 &copy; Jahir Carvajal Bernal</div>
     
 
-    <h1>Millonarios F.C.</h1>
-    <P>El Azul y Blanco Millonarios Fútbol Club simplemente conocido como Millonarios, es un club de fútbol de la ciudad de Bogotá, capital de Colombia. Es uno de los clubes más laureados y 
-        emblemáticos de Colombia, de allí que sea considerado uno de los clubes más grandes del país y uno de los más importantes de Sudamérica.
-        Los orígenes del equipo se remontan hasta la década de los años 1920, pero empezó a ser llamado como Los Millonarios en el año de 1932 cuando su nombre era el Club Deportivo Municipal; 
-        oficialmente fue fundado el 18 de junio de 1946 bajo el nombre de Club Deportivo Los Millonarios y, posteriormente, como Millonarios Fútbol Club el 20 de abril de 2011 cuando fue 
-        reconstituido como Sociedad Anónima.
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-        Participa en la máxima categoría de la División Mayor del Fútbol Colombiano, la Categoría Primera A, desde su fundación en 1948 siendo uno de los tres únicos equipos que ha participado
-        en todos sus torneos, junto a Independiente Santa Fe y Atlético Nacional.
-        
-        En su palmarés adornan 15 campeonatos del torneo local 
-        de la Liga Colombiana, se registran 2 títulos de la Copa Colombia y 1 de la Superliga Colombiana. Asi mismo, logró coronarse como campeón continental en la Copa Simón Bolívar del año 
-        1972 ​y en la última edición de la Copa Merconorte en el año 2001.
-        
-        Disputa el Clásico capitalino contra Independiente Santa Fe, además de tener fuertes rivalidades con el América de Cali, Atlético Nacional​ y Deportivo Cali.
-        
-        A partir del inicio del campeonato colombiano en 1948 logró la mayor cantidad de los títulos locales que se disputaron y conformó un equipo apodado el Ballet Azul,​ que era considerado de 
-        gran importancia a nivel mundial durante la primera parte de la década de los años 1950, cuando consiguió muchos triunfos internacionales, entre los que destacan el Campeonato de las Bodas
-         de Oro del Real Madrid el cual obtuvo en el Estadio Santiago Bernabeu y la Pequeña Copa del Mundo de Clubes de 1953, que le dieron los calificativos del equipo "Embajador". En 2014 fue 
-         distinguido por la revista Kicker de Alemania como uno de los 40 equipos más legendarios de la historia del fútbol.​ Es considerado por la FIFA, un club clásico y denominado por la 
-         entidad como "el primer Embajador del fútbol colombiano".</P>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
 
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
 
 <script src="script.js"></script>
-        </body>
+</body>
+
 </html>

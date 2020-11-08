@@ -1,9 +1,9 @@
 {
-    "name": "Millonarios F.C.",
-    "short_name": "Millonarios F.C.",
-    "description": "Millonarios F.C.",
-    "background_color": "#0A0FE1",
-    "theme_color": "#FEFEFF",
+    "name": "Ahorra +",
+    "short_name": "Ahorra +",
+    "description": "Ahorra +",
+    "background_color": "#1976D2",
+    "theme_color": "#6d7fcc",
     "orientation": "portrait",
     "display": "standalone",
     "start_url": "./?utm_source=web_app_manifest",
@@ -11,52 +11,52 @@
     "lang": "es-CO",
     "icons": [
       {
-        "src": "./img/favicon/millonarios_1024.png",
+        "src": "./img/favicon/ahorrar_1024.png",
         "sizes": "1024x1024",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_512.png",
+        "src": "./img/favicon/ahorrar_512.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_384.png",
+        "src": "./img/favicon/ahorrar_384.png",
         "sizes": "384x384",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_256.png",
+        "src": "./img/favicon/ahorrar_256.png",
         "sizes": "256x256",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_192.png",
+        "src": "./img/favicon/ahorrar_192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_128.png",
+        "src": "./img/favicon/ahorrar_128.png",
         "sizes": "128x128",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_96.png",
+        "src": "./img/favicon/ahorrar_96.png",
         "sizes": "96x96",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_64.png",
+        "src": "./img/favicon/ahorrar_64.png",
         "sizes": "64x64",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_32.png",
+        "src": "./img/favicon/ahorrar_32.png",
         "sizes": "32x32",
         "type": "image/png"
       },
       {
-        "src": "./img/favicon/millonarios_16.png",
+        "src": "./img/favicon/ahorrar_16.png",
         "sizes": "16x16",
         "type": "image/png"
       }

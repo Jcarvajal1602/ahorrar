@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Ahorra +</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="./img/favicon/ahorrar.png">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+  html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#pie {
+  height:50px;
+  line-height:50px;
+  background:#6d7fcc;
+  color:white;
+  text-align:center;
+  position:fixed !important;
+  bottom:0;
+  left:0;
+  width:100%;
+}
+
+
+</style>
+
+<script>
+
+function getGET()
+{
+    // capturamos la url
+    var loc = document.location.href;
+    // si existe el interrogante
+    if(loc.indexOf('?')>0)
+    {
+        // cogemos la parte de la url que hay despues del interrogante
+        var getString = loc.split('?')[1];
+        // obtenemos un array con cada clave=valor
+        var GET = getString.split('&');
+        var get = {};
+        // recorremos todo el array de valores
+        for(var i = 0, l = GET.length; i < l; i++){
+            var tmp = GET[i].split('=');
+            get[tmp[0]] = unescape(decodeURI(tmp[1]));
+        }
+        return get;
+    }
+}
+
+    // Cogemos los valores pasados por get
+    var valores=getGET();
+    //recogemos los valores que nos envia la URL en variables para trabajar con ellas
+    var nombre = valores['n'];
+    var avatar = valores['a'];
+
+
+
+    
+
+    function crear(){
+
+
+    var col = document.getElementById("cols").value;
+    pesos=50;
+    campos = col/pesos; 
+    
+    
+
+    var valoresocultos ="<input type='hidden' id='nombre' value='"+nombre+"'><input type='hidden' id='avatar' value='"+avatar+"'>";
+    console.log(valoresocultos)
+    var nav ="<div><h5>Bienvenido "+nombre+"<img src='./img/perfil.jpg' alt='perfil' style='width: 50px; height: 50px; background:#EFEFEF;'></h5></div>";
+
+    var tabla="<br><div class='line'></div><table border=\"2\">";
+    tabla+="<tr>";
+
+        
+if (col % 50 == 0 && col != "" && col >= 50 ) {
+    
+
+        //casilla de dinero
+        var i = 0;
+        for(j=0;j<campos;j++){ 
+
+            var result = 0;
+            do {
+            i = i + 50;
+            result = result + i;
+            } while (i <= campos);
+
+            if( j == 9 || j == 19 || j == 29 ||j == 39 || j == 49 || j == 59 || j == 69 || j == 79 || j == 89 ||  j == 99
+            || j == 109 || j == 119 || j == 129 ||j == 139 || j == 149 || j == 159 || j == 169 || j == 179 || j == 189 || j == 199
+            || j == 209 || j == 219 || j == 229 ||j == 239 || j == 249 || j == 259 || j == 269 || j == 279 || j == 289 ||  j == 299
+            || j == 309 || j == 319 || j == 329 ||j == 339 || j == 349 || j == 359 || j == 369 || j == 379 || j == 389 || j == 399
+            || j == 409 || j == 419 || j == 429 ||j == 439 || j == 449 || j == 459 || j == 469 || j == 479 || j == 489 ||  j == 499
+            || j == 509 || j == 519 || j == 529 ||j == 539 || j == 549 || j == 559 || j == 569 || j == 579 || j == 589 ||  j == 599
+            || j == 609 || j == 619 || j == 629 ||j == 639 || j == 649 || j == 659 || j == 669 || j == 679 || j == 689 ||  j == 699
+            || j == 709 || j == 719 || j == 729 ||j == 739 || j == 749 || j == 759 || j == 769 || j == 779 || j == 789 ||  j == 799
+            || j == 809 || j == 819 || j == 829 ||j == 839 || j == 849 || j == 859 || j == 869 || j == 879 || j == 889 ||  j == 899
+            || j == 909 || j == 919 || j == 929 ||j == 939 || j == 949 || j == 959 || j == 969 || j == 979 || j == 989 ||  j == 999
+            || j == 1009 || j == 1019 || j == 1029 ||j == 1039 || j == 1049 || j == 1059 || j == 1069 || j == 1079 || j == 1089 ||  j == 1099
+            || j == 1109 || j == 1119 || j == 1129 ||j == 1139 || j == 1149 || j == 1159 || j == 1169 || j == 1179 || j == 1189 ||  j == 1199
+            ){
+                tabla+= "<td style='text-align:center'>"+('$'+result);
+                tabla+="<input type='color' id='valor' name='color' value='#FFFFFF'>"+ "</td></tr>";
+            }else{
+                tabla+= "<td style='text-align:center'>"+('$'+result);
+
+                tabla+="<input type='color' name='color' id='valor'  value='#FFFFFF'>"+ "</td>";
+            }
+        }
+        tabla+="</tr>";
+        
+        tabla+="</table>";
+
+        for(j=0;j<campos;j++){  
+            var i=0;
+            var numero=0;
+            var misuma=0;
+            while(i<=campos){
+            misuma=misuma+numero;
+            i=i+1;
+            numero=numero+50;
+            }
+            console.log(misuma);
+                    }
+        tabla+="<br><p><strong>Total a Ahorrar"+" "+('$'+misuma)+"</strong></p>";
+        
+
+    }else{
+       tabla+="<div class='alert alert-danger'> La cantidad de dinero debe ser multiplo de 50. </div>";
+       tabla+="<br><p><strong>Total a Ahorrar $0 </strong></p>";
+      }
+
+      setTimeout(function() {
+        div = document.getElementById('guardar');
+            div.style.display = '';
+    },3000);
+
+      
+
+      document.getElementById("resultado").innerHTML=tabla
+      document.getElementById("nav").innerHTML=nav
+}
+
+function crear2() {
+    document.getElementById("resultado").innerHTML="";
+    document.form.reset();
+    document.form.cols.focus();
+
+    div = document.getElementById('guardar');
+            div.style.display = 'none';
+        }
+
+     
+        function executeAjaxRequest() {
+  $("#resultado").addClass("loader")
+  setTimeout(() => $("#resultado").removeClass("loader"), 3000);
+}
+
+
+   // guardar datos
+
+  
+var casillap =[];
+var nombrep =[];
+var fotop =[];
+
+var RegistrarDatos = document.querySelector('#guardar');
+
+
+function registrar(){
+    var casillavalor = 4,
+        nombreu = nombre,
+        fotou = avatar;
+
+    casillap.push(casillavalor);
+    nombrep.push(nombreu);
+    fotop.push(fotou);
+
+    localStorage.setItem('casilla_usuario',JSON.stringify(casillap));
+    localStorage.setItem('nombre_usuario',JSON.stringify(nombrep));
+    localStorage.setItem('avatar_usuario',JSON.stringify(fotop));
+}
+
+
+</script>
+
+<body>
+   
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="./img/favicon/ahorrar.png" alt="Ahorrar +" width="50" height="50"> Ahorra +</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Estadisticas</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Avance del ahorro</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="download">Descargar tabla de registros</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid" >
+                    
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menú</span>
+                    </button>
+                    <div id="nav" style="text-align: right;"></div>
+                </div>
+            </nav>
+
+
+            <form name="form">
+                <div class=" form-group row">
+                    <label for="" class="col-md-2 col-form-label"><strong>Dinero a ahorrar:</strong></label>
+                        <div class="col-sm-2 ">
+                            <input type="number" min="50" id="cols" class="form-control" required autofocus><br>
+                        </div>
+                        <div class="col-sm-6 ">
+                            
+                            <input type="button" id="enviar" class="btn btn-primary" value="crear tabla" onclick="crear(), executeAjaxRequest()">
+                            <input type="button" id="limpiar" class="btn btn-danger" value="Limpiar" onclick="crear2()">            
+                    </div>
+                </div>
+            </form>
+            
+            <div id="resultado"></div>
+            
+            <div id='guardar'  style="display: none;">
+                <br><input type="button" class="btn btn-primary" id="guardar" value="guardar" onclick="registrar();">
+                <div class='line'>
+            </div>
+
+
+        </div>
+        
+    </div>
+
+
+    <div id="pie"> 2020 &copy; Jahir Carvajal Bernal  </div>
+
+    
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
